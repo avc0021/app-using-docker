@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 function ChuckNorris() {
-    const [quote, setQuote] = use('')
+    const [quote, setQuote] = useState('')
 
     useEffect(() => {
         fetch('https://api.chucknorris.io/jokes/random')
@@ -17,7 +17,11 @@ function ChuckNorris() {
 
 return (
     <div>
-      <p>{quote}</p>
+      <p>
+        {quote}
+      </p>
     </div>
   );
 }
+
+export default ChuckNorris;
